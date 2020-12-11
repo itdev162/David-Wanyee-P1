@@ -1,0 +1,288 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj": {}
+  },
+  "projects": {
+    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj",
+        "projectName": "API",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj",
+        "packagesPath": "/Users/dngw/.nuget/packages/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dngw/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.ASPNetcore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj",
+        "packagesPath": "/Users/dngw/.nuget/packages/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dngw/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj"
+              },
+              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj",
+        "packagesPath": "/Users/dngw/.nuget/packages/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dngw/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj",
+        "packagesPath": "/Users/dngw/.nuget/packages/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dngw/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkcore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
