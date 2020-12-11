@@ -1409,11 +1409,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj",
+      "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj",
+      "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj",
       "packagesPath": "/Users/dngw/.nuget/packages/",
-      "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/obj/",
+      "outputPath": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dngw/.nuget/NuGet/NuGet.Config"
@@ -1427,8 +1427,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
-              "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj"
+            "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj": {
+              "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj"
             }
           }
         }

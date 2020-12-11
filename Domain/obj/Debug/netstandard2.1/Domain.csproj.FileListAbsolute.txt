@@ -16,3 +16,12 @@
 /Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.csproj.CoreCompileInputs.cache
 /Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.dll
 /Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.pdb
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/bin/Debug/netstandard2.1/Domain.deps.json
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/bin/Debug/netstandard2.1/Domain.dll
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/bin/Debug/netstandard2.1/Domain.pdb
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.csprojAssemblyReference.cache
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfoInputs.cache
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfo.cs
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.csproj.CoreCompileInputs.cache
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.dll
+/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/Debug/netstandard2.1/Domain.pdb

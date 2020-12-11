@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj": {}
+    "/Users/dngw/Repositories/David-Wanyee-P1/API/API.csproj": {}
   },
   "projects": {
-    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj": {
+    "/Users/dngw/Repositories/David-Wanyee-P1/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj",
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-P1/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/API.csproj",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/API/API.csproj",
         "packagesPath": "/Users/dngw/.nuget/packages/",
-        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/API/obj/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-P1/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dngw/.nuget/NuGet/NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj": {
-                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj"
+              "/Users/dngw/Repositories/David-Wanyee-P1/Application/Application.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Application/Application.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj": {
+    "/Users/dngw/Repositories/David-Wanyee-P1/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj",
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-P1/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/Application.csproj",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Application/Application.csproj",
         "packagesPath": "/Users/dngw/.nuget/packages/",
-        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Application/obj/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-P1/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dngw/.nuget/NuGet/NuGet.Config"
@@ -110,11 +110,11 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
-                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj"
+              "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj"
               },
-              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj": {
-                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj"
+              "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj"
               }
             }
           }
@@ -164,14 +164,14 @@
         }
       }
     },
-    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
+    "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj",
         "packagesPath": "/Users/dngw/.nuget/packages/",
-        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/obj/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-P1/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dngw/.nuget/NuGet/NuGet.Config"
@@ -214,14 +214,14 @@
         }
       }
     },
-    "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj": {
+    "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj",
+        "projectUniqueName": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/Persistence.csproj",
+        "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/Persistence.csproj",
         "packagesPath": "/Users/dngw/.nuget/packages/",
-        "outputPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Persistence/obj/",
+        "outputPath": "/Users/dngw/Repositories/David-Wanyee-P1/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dngw/.nuget/NuGet/NuGet.Config"
@@ -235,8 +235,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj": {
-                "projectPath": "/Users/dngw/Repositories/David-Wanyee-itdev162/David-Wanyee-P1/Domain/Domain.csproj"
+              "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj": {
+                "projectPath": "/Users/dngw/Repositories/David-Wanyee-P1/Domain/Domain.csproj"
               }
             }
           }

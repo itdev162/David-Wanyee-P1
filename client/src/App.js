@@ -170,12 +170,12 @@ class App extends React.Component{
                         source = {{uri: image.uri}}
                         style = {{width:300, height:300}}
                       />
-                      <Button title = "Upload" onClick={this.handleUploadPhoto}/>
+                      <Button title = "Upload" onClick={this.handleUploadPhoto}></Button>
                     </React.Fragment>  
-                  )}
-                  <Button title = "Choose Photo" onClick = {this.handleChoosePhoto}/>
-                  <Button title = "Delete Photo" onClick = {this.deletePhoto}/>
-                  </View>
+                  )};
+                  <Button title = "Choose Photo" onClick = {this.handleChoosePhoto}></Button>
+                  <Button title = "Delete Photo" onClick = {this.deletePhoto}></Button>
+                </View>
               </Route>
             </Switch>
           </main>
