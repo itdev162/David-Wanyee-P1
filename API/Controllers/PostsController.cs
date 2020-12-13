@@ -65,6 +65,7 @@ namespace API.Controllers
                 ID = request.ID,
                 Title = request.Title,
                 Body = request.Body,
+                Imagemetadata = request.Imagemetadata,
                 Image = request.Image,
                 Date = request.Date
             };
@@ -98,6 +99,7 @@ namespace API.Controllers
             //update the post properties with request values, if present
             post.Title = request.Title !=null ? request.Title : post.Title;
             post.Body = request.Body != null ? request.Body : post.Body;
+            post.Imagemetadata = request.Imagemetadata != null ? request.Imagemetadata : post.Imagemetadata;
             post.Image = request.Image !=null ? request.Image : post.Image;
             post.Date = request.Date != null ? request.Date : post.Date;
 

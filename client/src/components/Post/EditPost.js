@@ -9,9 +9,10 @@ const EditPost = ({post, onPostUpdated}) => {
     const [postData, setPostData] = useState({
         title:post.title,
         body: post.body,
+        imagemetadata : post.imagemetadata,
         image: post.image
     });
-    const {title, body, image } = postData;
+    const {title, body, imagemetadata ,image } = postData;
 
     const onChange = e =>{
         const {name, value} = e.target;
@@ -23,7 +24,7 @@ const EditPost = ({post, onPostUpdated}) => {
     };
 
     const update = async () =>{
-        if(!title || !body || !image){
+        if(!title || !body || !imagemetadata ||!image){
             console.log('Title, body & image are required');
         }
         else{
@@ -31,6 +32,7 @@ const EditPost = ({post, onPostUpdated}) => {
                 id: post.id,
                 title:title,
                 body:body,
+                imagemetadata: imagemetadata,
                 image:image,
                 date:moment().toISOString()
             };
@@ -38,16 +40,19 @@ const EditPost = ({post, onPostUpdated}) => {
             try{
                 const config = {
                     headers:{
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Content-Transfer-Encoding': 'multipart/form-data'
                     }
                 };
 
                 //create the post
                 const body = JSON.stringify(newPost);
+                const imagemetadata = encodeURI(JSON.stringify(newPost));
                 const image = Image.uri('../Images/$(image.fileName)');
                 const res = await axios.put(
                     'http://localhost:5000/api/posts',
                     body,
+                    imagemetadata,
                     image,
                     config
                 );

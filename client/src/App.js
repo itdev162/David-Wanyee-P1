@@ -1,8 +1,6 @@
 /* jshint esversion: 5 */ 
 import React from 'react';
 import axios from 'axios';
-import {View, Image, Button} from 'babel-preset-react';
-import ImagePicker from '@frameworkless/bodyparser';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import PostList from './components/PostList/PostList';
 import Post from './components/Post/Post';
@@ -10,66 +8,13 @@ import CreatePost from './components/Post/CreatePost';
 import EditPost from './components/Post/EditPost';
 import './App.css';
 
-const uploadImageData = (image, body) =>{
-    const data = new FormData();
 
-    data.append("image",{
-      name: image.fileName,
-      type: image.type,
-      uri: image.uri('./components/Images')
-      
-    })
-
-    Object.keys(body).forEach(key =>{
-      data.append(key, body[key]);
-    });
-
-    return data;
-  };
 class App extends React.Component{
   state = {
     posts:[],
     post:null,
     image: null
   };
-
-  handleChoosePhoto = () => {
-    const options = {
-      noData: true,
-    }
-    ImagePicker.launchImageLibrary(options, response =>{
-      if(response.uri){
-        this.setState({image:response})
-      }
-    })
-  };
-
-  handleUploadPhoto = () => {
-    axios
-    .get('./components/Images',uploadImageData)
-    .then(response => response.json())
-    .then(response => {
-      console.log("upload success");
-      this.setState({image:null});
-    })
-    .catch(error =>{
-      console.error("upload error");
-    });
-  };
-
-
-  deletePhoto = () => {
-    axios
-    .delete('./components/Images/$(image.fileName)')
-    .then(response => response.json())
-    .then(response => {
-      console.log("deleted!");
-      this.setState({image:null});
-    })
-    .catch(error =>{
-      console.error("delete error");
-    });
-    }
 
   componentDidMount(){
     axios
@@ -133,7 +78,7 @@ class App extends React.Component{
   };
 
   render(){
-    const{posts, post, image} = this.state;
+    const{posts, post} = this.state;
 
     return (
       <Router>
@@ -161,21 +106,6 @@ class App extends React.Component{
               </Route>
               <Route path = "/edit-post/:postId">
                 <EditPost post= {post} onPostUpdated={this.onPostUpdated} />
-              </Route>
-              <Route>
-                <View style = {{flex:1, alignItems:'center', justifyContent: 'center'}}>
-                  {image && (
-                    <React.Fragment>
-                      <Image
-                        source = {{uri: image.uri}}
-                        style = {{width:300, height:300}}
-                      />
-                      <Button title = "Upload" onClick={this.handleUploadPhoto}></Button>
-                    </React.Fragment>  
-                  )};
-                  <Button title = "Choose Photo" onClick = {this.handleChoosePhoto}></Button>
-                  <Button title = "Delete Photo" onClick = {this.deletePhoto}></Button>
-                </View>
               </Route>
             </Switch>
           </main>

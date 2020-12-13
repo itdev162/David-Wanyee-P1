@@ -10,9 +10,10 @@ const CreatePost = ({onPostCreated}) =>{
     const [postData, setPostData]=useState({
     title:'',
     body:'',
+    imagemetadata: '',
     image:''
     });
-    const{title, body, image} = postData;
+    const{title, body, imagemetadata,image} = postData;
 
     const onChange = e => {
         const {name, value} = e.target;
@@ -24,7 +25,7 @@ const CreatePost = ({onPostCreated}) =>{
     };
 
     const create = async () =>{
-        if(!title || !body ||!image){
+        if(!title || !body ||!imagemetadata||!image){
             console.log('Title, body & image are required');
         }else
         {
@@ -32,22 +33,26 @@ const CreatePost = ({onPostCreated}) =>{
                 id: uuid.v4(),
                 title: title,
                 body:body,
+                imagemetadata: imagemetadata,
                 image:image,
                 date: moment().toISOString()
             };
             try{
                 const config = {
                     headers: {
-                        'Content-Type':'application/json'
+                        'Content-Type':'application/json',
+                        'Content-Transfer-Encoding': 'multipart/form-data'
                     }
                 };
 
                 //create the post
                 const body = JSON.stringify(newPost);
+                const imagemetadata = encodeURI(JSON.stringify(newPost));
                 const image = Image.uri('../Images/$(image.fileName)');
                 const res = await axios.post(
                     'http://localhost:5000/api/posts',
                     body,
+                    imagemetadata,
                     image,
                     config
                 );
