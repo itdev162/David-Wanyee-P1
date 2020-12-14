@@ -13,10 +13,9 @@ const PostListItem = props =>
 {
     const {post, clickPost, deletePost, editPost, image} = props;
     const history = useHistory();
-
+    
     const handleClickPost = post =>{
         const slug = slugify(post.title, {lower: true});
-
         clickPost(post);
         history.push(/posts/(slug));
     };
@@ -25,8 +24,6 @@ const PostListItem = props =>
         editPost(post);
         history.push('/edit-post/$(post.id)');
     };
-
-    
 
     const handledPickPhoto = post => {
         const options = {
@@ -39,32 +36,29 @@ const PostListItem = props =>
         })
     };
 
-    metadata(image.uri);
-
     const imageData = (image, body) =>{
         const data = new FormData();
 
         data.append("image",{
           name: image.fileName,
           type: image.type,
+          length: image.length,
+          metadata:image.metadata,
           uri: image.uri('./components/Images')
       
          })
 
          Object.keys(body).forEach(key =>{
-         data.append(key, body[key]);
-         });
-
-         //unecessary for now 
-         
-         
-
+         data.append(key, body[key])
+        });
         return data;
     };
 
     const handledUploadPhoto = () => {
        axios
-        .get('./components/Images', imageData)
+        .put('./components/Images', imageData)
+        metadata(image.fileName, image.key);
+        history.push(/posts/(metadata))
         .then(response => response.json())
         .then(response => {
         console.log("upload success");

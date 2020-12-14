@@ -12,8 +12,6 @@ namespace Domain
 
         public DateTime Date { get; set; }
 
-        public string Imagemetadata {get; set;}
-
-        public string Image {get; set;} 
+        public string Image {get; set;}
     }
 }

@@ -10,6 +10,7 @@ namespace Application.Posts
 {
     public static class List
     {
+        
         public class Query : IRequest<List<Post>>  { }
 
         public class Handler : IRequestHandler<Query, List<Post>>
@@ -22,6 +23,10 @@ namespace Application.Posts
             {
                 return this.context.Posts.ToListAsync();
             }
-         }
+
+        }
+
+        
+
     }
 }

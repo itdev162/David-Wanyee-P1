@@ -33,6 +33,7 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMediatR(typeof(List.Handler).Assembly);
+            services.AddMediatR(typeof(ImageList.Handler).Assembly);
             services.AddCors(opt =>
             {
                 opt.AddPolicy(CorsPolicy, policyBuilder=>

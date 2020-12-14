@@ -4,16 +4,27 @@ import {v4 as uuid} from 'uuid';
 import moment from 'moment';
 import {useHistory} from 'react-router-dom';
 import './styles.css';
+import { encode } from 'querystring';
 
 const CreatePost = ({onPostCreated}) =>{
     let history = useHistory();
+
     const [postData, setPostData]=useState({
     title:'',
     body:'',
-    imagemetadata: '',
     image:''
     });
-    const{title, body, imagemetadata,image} = postData;
+
+    const [imageData, setImageData] = useState({
+        imageName: '',
+        imageType:'',
+        imageLength:'',
+        imageURI:'',
+        imageMetaData:''
+    });
+
+    const{title, body,image} = postData;
+    const{imageName,imageType,imageLength,imageURI,imageMetaData} = imageData;
 
     const onChange = e => {
         const {name, value} = e.target;
@@ -22,10 +33,15 @@ const CreatePost = ({onPostCreated}) =>{
             ...postData,
             [name]:value
         });
+
+        setImageData({
+            ...ImageData,
+            [name]:value
+        });
     };
 
     const create = async () =>{
-        if(!title || !body ||!imagemetadata||!image){
+        if(!title || !body ||!image){
             console.log('Title, body & image are required');
         }else
         {
@@ -33,7 +49,6 @@ const CreatePost = ({onPostCreated}) =>{
                 id: uuid.v4(),
                 title: title,
                 body:body,
-                imagemetadata: imagemetadata,
                 image:image,
                 date: moment().toISOString()
             };
@@ -45,19 +60,62 @@ const CreatePost = ({onPostCreated}) =>{
                     }
                 };
 
+
                 //create the post
                 const body = JSON.stringify(newPost);
-                const imagemetadata = encodeURI(JSON.stringify(newPost));
-                const image = Image.uri('../Images/$(image.fileName)');
+                const image = Image;
                 const res = await axios.post(
                     'http://localhost:5000/api/posts',
                     body,
-                    imagemetadata,
                     image,
                     config
                 );
                 
                 //call the handler and redirect
+                onPostCreated(res.data);
+                history.push('/');
+            }
+            catch(error){
+                console.error('Error creating post: $(error.response.data)');
+             }
+            }
+        };
+
+        const create1 = async () =>{
+        if(!image){
+            console.log('image is required');
+        }else
+        {
+            const newImageData = {
+            imageid: uuid.v4(),
+            imageName: imageName,
+            imageType: imageType,
+            imageLength: imageLength,
+            imageURI:imageURI,
+            imageMetaData:imageMetaData,
+            date: moment().toISOString()
+            };
+            try
+            {
+                const config1 = {
+                    headers: {
+                        'Content-Type':'application/json',
+                    }
+                };
+
+                //create the imagedata
+                const imageName = JSON.stringify(newImageData);
+                const imageType =JSON.stringify(newImageData);
+                const imageLength = JSON.stringify(newImageData);
+                const imageURI = encodeURI(JSON.stringify(newImageData));
+                const imageMetaData = encode(JSON.stringify(newImageData));
+                const res = await axios.post(
+                    'http://localhost:5000/api/posts',
+                    imageName,imageType,imageLength, imageURI, imageMetaData,
+                    config1,
+                );
+
+                 //call the handler and redirect
                 onPostCreated(res.data);
                 history.push('/');
             }
@@ -92,7 +150,7 @@ const CreatePost = ({onPostCreated}) =>{
                 onChange = {e => onChange(e)}>
                 </image>
             </p>
-            <button onClick = {() => create()}>Submit</button>
+            <button onClick = {() => create() + create1()}>Submit</button>
         </div>
     );
 };

@@ -17,7 +17,15 @@ namespace Persistence
                     new Post() { Title = "This is my third post", Body = "taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.", Image = "../client/src/components/Images/image3.jpeg"}
                 };
 
+                List<ImageCollection> seedImageCollections = new List<ImageCollection>
+                {
+                    new ImageCollection() { ImageName = "image1", ImageType = ".jpg", ImageLength = " ", ImageURI = "../client/src/components/Images/image1.jpeg" },
+                    new ImageCollection() { ImageName = "image2", ImageType = ".jpg", ImageLength = " ", ImageURI = "../client/src/components/Images/image2.jpeg"},
+                    new ImageCollection() { ImageName = "image3", ImageType = ".jpg", ImageLength = " ", ImageURI = "../client/src/components/Images/image3.jpeg"}
+                };
+
                 context.Posts.AddRange(seedPosts);
+                context.ImageCollections.AddRange(seedImageCollections);
 
                 context.SaveChanges();
             }

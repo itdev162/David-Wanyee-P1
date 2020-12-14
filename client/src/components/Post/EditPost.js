@@ -3,16 +3,28 @@ import axios from 'axios';
 import moment from 'moment'
 import {useHistory} from 'react-router-dom';
 import './styles.css';
+import { encode } from 'querystring';
 
 const EditPost = ({post, onPostUpdated}) => {
     let history = useHistory();
+
     const [postData, setPostData] = useState({
         title:post.title,
         body: post.body,
-        imagemetadata : post.imagemetadata,
         image: post.image
     });
-    const {title, body, imagemetadata ,image } = postData;
+
+    const [imageData, setImageData] = useState({
+        imageName: '',
+        imageType:'',
+        imageLength:'',
+        imageURI:'',
+        imageMetaData:''
+    });
+
+    const {title, body,image } = postData;
+
+    const{imageName,imageType,imageLength,imageURI,imageMetaData} = imageData;
 
     const onChange = e =>{
         const {name, value} = e.target;
@@ -21,10 +33,15 @@ const EditPost = ({post, onPostUpdated}) => {
             ...postData,
             [name]:value
         });
+
+        setImageData({
+            ...ImageData,
+            [name]:value
+        });
     };
 
     const update = async () =>{
-        if(!title || !body || !imagemetadata ||!image){
+        if(!title || !body || !image){
             console.log('Title, body & image are required');
         }
         else{
@@ -32,7 +49,6 @@ const EditPost = ({post, onPostUpdated}) => {
                 id: post.id,
                 title:title,
                 body:body,
-                imagemetadata: imagemetadata,
                 image:image,
                 date:moment().toISOString()
             };
@@ -47,12 +63,10 @@ const EditPost = ({post, onPostUpdated}) => {
 
                 //create the post
                 const body = JSON.stringify(newPost);
-                const imagemetadata = encodeURI(JSON.stringify(newPost));
-                const image = Image.uri('../Images/$(image.fileName)');
+                const image = Image;
                 const res = await axios.put(
                     'http://localhost:5000/api/posts',
                     body,
-                    imagemetadata,
                     image,
                     config
                 );
@@ -66,6 +80,50 @@ const EditPost = ({post, onPostUpdated}) => {
                 }
             }
         };  
+
+        const update1 = async () =>{
+        if(!image){
+            console.log('image is required');
+        }else
+        {
+            const newImageData = {
+            imageid: post.id,
+            imageName: imageName,
+            imageType: imageType,
+            imageLength: imageLength,
+            imageURI:imageURI,
+            imageMetaData:imageMetaData,
+            date: moment().toISOString()
+            };
+            try
+            {
+                const config1 = {
+                    headers: {
+                        'Content-Type':'application/json',
+                    }
+                };
+
+                //create the imagedata
+                const imageName = JSON.stringify(newImageData);
+                const imageType =JSON.stringify(newImageData);
+                const imageLength = JSON.stringify(newImageData);
+                const imageURI = encodeURI(JSON.stringify(newImageData));
+                const imageMetaData = encode(JSON.stringify(newImageData));
+                const res = await axios.post(
+                    'http://localhost:5000/api/posts',
+                    imageName,imageType,imageLength, imageURI, imageMetaData,
+                    config1,
+                );
+
+                 //call the handler and redirect
+                onPostUpdated(res.data);
+                history.push('/');
+            }
+            catch(error){
+                console.error('Error creating post: $(error.response.data)');
+             }
+            }
+        };
 
         return(
             <div className = "form-container">
@@ -92,7 +150,7 @@ const EditPost = ({post, onPostUpdated}) => {
                 onChange = {e => onChange(e)}>
                 </image>
             </p>
-                <button onClick = {() => update()}>Submit</button>
+                <button onClick = {() => update() + update1()}>Submit</button>
             </div>
         );
 };
